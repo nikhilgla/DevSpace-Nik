@@ -2,6 +2,7 @@ const Follow = require('../models/Follow')
 
 // create separate collection inmongodb followerid and author ok id
 
+
 exports.addFollow = function(req, res){
     let follow = new Follow(req.params.username, req.visitorId)
     follow.create().then(()=>{
